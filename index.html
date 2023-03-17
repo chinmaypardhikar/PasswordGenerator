@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password & Key Generator</title>
+    <link rel="stylesheet" href="passwordGenerator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <section class="homescreen">
+            <svg id="visual" viewBox="0 0 1920 1080"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="z-index: -10;position: absolute;" >
+                <path
+                    d="M0 516L29.2 486C58.3 456 116.7 396 174.8 348.5C233 301 291 266 349.2 268.3C407.3 270.7 465.7 310.3 523.8 332.3C582 354.3 640 358.7 698.2 395.2C756.3 431.7 814.7 500.3 872.8 509.5C931 518.7 989 468.3 1047.2 472.2C1105.3 476 1163.7 534 1221.8 561C1280 588 1338 584 1396.2 552C1454.3 520 1512.7 460 1570.8 397.7C1629 335.3 1687 270.7 1745.2 267.7C1803.3 264.7 1861.7 323.3 1890.8 352.7L1920 382L1920 0L1890.8 0C1861.7 0 1803.3 0 1745.2 0C1687 0 1629 0 1570.8 0C1512.7 0 1454.3 0 1396.2 0C1338 0 1280 0 1221.8 0C1163.7 0 1105.3 0 1047.2 0C989 0 931 0 872.8 0C814.7 0 756.3 0 698.2 0C640 0 582 0 523.8 0C465.7 0 407.3 0 349.2 0C291 0 233 0 174.8 0C116.7 0 58.3 0 29.2 0L0 0Z"
+                    fill="#5350cd" stroke-linecap="round" stroke-linejoin="miter" id="svgpath"></path>
+            </svg>
+            <div class="nav">
+                <div class="right-nav">
+                    <div class="logo">
+                        <img src="white-logo.png" alt="logo" id="logo">
+                    </div>
+                </div>
+                <div class="left-nav">
+                    <div class="personalProfile">.</div>
+                    <div class="darkmode">
+                        <input type="checkbox" class="theme" id="theme" name="theme">
+                        <label for="theme" class="labelTheme">
+                            <p class="nightmode">NIGHTMODE</p>
+                            <p class="daymode">DAYMODE</p>
+                            <div class="ball">
+                                <img src="moon.png" alt="sun" id="sun">
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="heading" id="heading">
+                <p>Random Password and Key Generator</p>
+            </div>
+
+            <div class="container">
+                <div class="rightContainer">
+                    <img src="homepage.png" alt="homepage">
+                </div>
+                <div class="leftContainer">
+                    <div class="passwordContainer">
+                        <input type="text" id="setPassword" placeholder="Password Space" readonly>
+                        <button onclick="copy()"><img src="copy.png" alt="copy" class="copy" ></button>
+                        <div class="copypopup" id="copypopup">
+                            <p>Copied</p>
+                        </div>
+                    </div>
+                    <div class="parameterContainer">
+                        <div class="passwordLength">
+                            <p>Password Length</p>
+                            <p class="sliderValue" id="sliderValue">8</p>
+                        </div>
+                        <div class="passwordSlider">
+                            <input type="range" name="vol" id="slider" min="0" max="100" step="1" value="8">
+                        </div>
+                        <div class="uppercaseLetters">
+                            <input type="checkbox" class="checkbox" name="uppercase" id="upper">
+                            <label for="Uppercase">Include Uppercase Letter</label> &nbsp;&nbsp;
+                            <input type="checkbox" class="checkbox" name="number" id="number">
+                            <label for="number">Include Numbers</label>
+                        </div>
+                        <div class="lowercaseLetters">
+                            <input type="checkbox" class="checkbox" name="lowercase" id="lower">
+                            <label for="Lowercase">Include Lowercase Letter</label> &nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" class="checkbox" name="symbol" id="symbol">
+                            <label for="symbol">Include Symbols</label>
+                        </div>
+                        <!-- <div class="numbers">
+                            <input type="checkbox" name="number" id="number">
+                            <label for="number">Include Numbers</label>
+                        </div>
+                        <div class="symbols">
+                            <input type="checkbox" name="symbol" id="symbol">
+                            <label for="symbol">Include Symbols</label>
+                        </div> -->
+                        <!-- <div class="strength">
+                            <p>Strength</p>
+                            <div class="box">
+                            </div>
+                        </div> -->
+                        <div class="generatorButton" id="generateButton">
+                            Generate Password
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <svg id="visual" viewBox="0 0 1920 200">
+            <path
+                d="M0 141L22.8 136.5C45.7 132 91.3 123 137 117.8C182.7 112.7 228.3 111.3 274 113.3C319.7 115.3 365.3 120.7 411.2 125C457 129.3 503 132.7 548.8 135.3C594.7 138 640.3 140 686 138.7C731.7 137.3 777.3 132.7 823 133.5C868.7 134.3 914.3 140.7 960 136.2C1005.7 131.7 1051.3 116.3 1097 108.3C1142.7 100.3 1188.3 99.7 1234 98.3C1279.7 97 1325.3 95 1371.2 99.8C1417 104.7 1463 116.3 1508.8 122.3C1554.7 128.3 1600.3 128.7 1646 126.7C1691.7 124.7 1737.3 120.3 1783 121.2C1828.7 122 1874.3 128 1897.2 131L1920 134L1920 201L1897.2 201C1874.3 201 1828.7 201 1783 201C1737.3 201 1691.7 201 1646 201C1600.3 201 1554.7 201 1508.8 201C1463 201 1417 201 1371.2 201C1325.3 201 1279.7 201 1234 201C1188.3 201 1142.7 201 1097 201C1051.3 201 1005.7 201 960 201C914.3 201 868.7 201 823 201C777.3 201 731.7 201 686 201C640.3 201 594.7 201 548.8 201C503 201 457 201 411.2 201C365.3 201 319.7 201 274 201C228.3 201 182.7 201 137 201C91.3 201 45.7 201 22.8 201L0 201Z"
+                fill="#5350cd" stroke-linecap="round" stroke-linejoin="miter" id="wavefooter"></path>
+        </svg>
+        <section class="footer" id="footer">
+            <hr width="80%">
+            <p>Copyright © 2023 MySelf. All Rights Reserved.</p>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="passwordGenerator.js"></script>
+    
+</body>
+</html>
