@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="left-nav">
-                    <div class="personalProfile">.</div>
+                    <div class="personalProfile"></div>
                     <div class="darkmode">
                         <input type="checkbox" class="theme" id="theme" name="theme">
                         <label for="theme" class="labelTheme">
@@ -37,7 +37,6 @@
                         </label>
                     </div>
                 </div>
-                
             </div>
 
             <div class="heading" id="heading">
@@ -65,16 +64,26 @@
                             <input type="range" name="vol" id="slider" min="0" max="100" step="1" value="8">
                         </div>
                         <div class="uppercaseLetters">
-                            <input type="checkbox" class="checkbox" name="uppercase" id="upper">
-                            <label for="Uppercase">Include Uppercase Letter</label> &nbsp;&nbsp;
-                            <input type="checkbox" class="checkbox" name="number" id="number">
-                            <label for="number">Include Numbers</label>
+                            <div>
+                                <input type="checkbox" class="checkbox" name="uppercase" id="upper">
+                                <label for="Uppercase">Include Uppercase Letter</label> &nbsp;&nbsp;
+                            </div>
+                            <div>
+                                <input type="checkbox" class="checkbox" name="number" id="number">
+                                <label for="number">Include Numbers</label>
+                            </div>
+                    
                         </div>
                         <div class="lowercaseLetters">
-                            <input type="checkbox" class="checkbox" name="lowercase" id="lower">
+                            <div>
+                                <input type="checkbox" class="checkbox" name="lowercase" id="lower">
                             <label for="Lowercase">Include Lowercase Letter</label> &nbsp;&nbsp;&nbsp;
-                            <input type="checkbox" class="checkbox" name="symbol" id="symbol">
+                            </div>
+                            <div>
+                                <input type="checkbox" class="checkbox" name="symbol" id="symbol">
                             <label for="symbol">Include Symbols</label>
+                            </div>
+                            
                         </div>
                         <!-- <div class="numbers">
                             <input type="checkbox" name="number" id="number">
